@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Produk - UMKM Banana Kriuk</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="bg-light">
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-warning">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">Banana Kriuk</a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Beranda</a></li>
+          <li class="nav-item"><a class="nav-link" href="tentang.html">Tentang Kami</a></li>
+          <li class="nav-item"><a class="nav-link active" href="produk.html">Produk</a></li>
+          <li class="nav-item"><a class="nav-link" href="galeri.html">Galeri</a></li>
+          <li class="nav-item"><a class="nav-link" href="kontak.html">Kontak</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- MAIN CONTENT -->
+  <main class="container mt-4">
+
+    <h2 class="fw-bold">Produk Unggulan Kami</h2>
+    <p>Berikut daftar produk Keripik pisang yang kami sediakan:</p>
+
+    <!-- TABEL PRODUK Bootstrap -->
+    <div class="table-responsive">
+      <table class="table table-bordered table-striped text-center">
+        <thead class="table-warning">
+          <tr>
+            <th>Produk</th>
+            <th>Ukuran</th>
+            <th>Harga</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Keripik pisang rasa coklat</td>
+            <td>250g</td>
+            <td>Rp 15.000</td>
+          </tr>
+          <tr>
+            <td>Keripik pisang rasa matcha</td>
+            <td>250g</td>
+            <td>Rp 15.000</td>
+          </tr>
+          <tr>
+            <td>Keripik pisang rasa taro</td>
+            <td>250g</td>
+            <td>Rp 15.000</td>
+          </tr>
+          <tr class="table-secondary">
+            <td colspan="3">Semua harga sudah termasuk PPN</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3 class="mt-4">Profil Produk</h3>
+    <img src="download (2).jpeg" alt="Kemasan kerpik pisang" width="200" class="img-thumbnail mb-3" />
+    <p>kami menyediakan keripik pisang renyah dengan berbagai varian rasa</p>
+
+    <!-- CARD BOOTSTRAP -->
+    <div class="card shadow-sm mb-4" style="width: 18rem;">
+      <img src="download (1).jpeg" class="card-img-top" alt="Produk UMKM">
+      <div class="card-body">
+        <h5 class="card-title">Banana Kriuk</h5>
+        <p class="card-text">
+          Keripik pisang renyah dengan berbagai varian rasa.
+        </p>
+      </div>
+    </div>
+
+    <!-- ======== BAGIAN PERCABANGAN ======== -->
+    <section id="usia-section" class="mt-4">
+      <h3>Cek Kategori Usia Pelanggan</h3>
+      <input type="number" id="usiaInput" placeholder="Usia" class="form-control w-25 mb-2" />
+      <button class="btn btn-warning" onclick="cekUsia()">Cek</button>
+      <p id="hasilUsia" class="mt-2 fw-bold"></p>
+    </section>
+
+    <!-- ======== BAGIAN PERULANGAN (TESTIMONI) ======== -->
+    <section id="testimoni" class="mt-4">
+      <h3>Testimoni Pelanggan</h3>
+      <div id="daftarTestimoni" class="row gy-3"></div>
+    </section>
+
+    <!-- ======== BAGIAN FUNGSI (TOTAL BELANJA) ======== -->
+    <section id="belanja" class="mt-4">
+      <h3>Hitung Total Belanja</h3>
+
+      <form onsubmit="hitungBelanja(event)" class="w-50">
+        <label for="harga" class="form-label">Harga Satuan (Rp):</label>
+        <input type="number" id="harga" class="form-control" value="15000" required />
+
+        <label for="jumlah" class="form-label mt-3">Jumlah Beli:</label>
+        <input type="number" id="jumlah" class="form-control" required />
+
+        <button class="btn btn-success mt-3" type="submit">Hitung Total</button>
+      </form>
+
+      <p id="hasilTotal" class="fw-bold mt-3"></p>
+    </section>
+
+    <!-- AUDIO/VIDEO -->
+    <h3 class="mt-4">Dengarkan Cerita Kami</h3>
+
+    <video controls class="w-50 mb-3">
+      <source src="ssstik.io_@ayu.rhy30_1758006651159.mp4" type="video/mp4">
+      Video tidak tersedia di browser Anda.
+    </video>
+
+    <audio controls class="mb-4">
+      <source src="ssstik.io_1757487183617 (1).mp4" type="audio/mpeg">
+      Audio tidak tersedia di browser Anda.
+    </audio>
+
+  </main>
+
+  <footer class="text-center p-3 bg-white mt-5 shadow-sm">
+    <p>&copy; 2025 Banana Kriuk</p>
+  </footer>
+
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    // ======== Percabangan: Cek Usia ========
+    function cekUsia() {
+      let usia = document.getElementById("usiaInput").value;
+      let hasil = "";
+
+      if (usia < 13) {
+        hasil = "Kategori: Anak-anak ";
+      } else if (usia >= 13 && usia <= 17) {
+        hasil = "Kategori: Remaja ";
+      } else if (usia >= 18 && usia <= 60) {
+        hasil = "Kategori: Dewasa ";
+      } else if (usia > 60) {
+        hasil = "Kategori: Lansia ";
+      } else {
+        hasil = "Masukkan usia yang valid!";
+      }
+
+      document.getElementById("hasilUsia").textContent = hasil;
+    }
+
+    // ======== Perulangan: Testimoni ========
+    const testimoniList = [
+      { nama: "Dwi", isi: "Rasanya renyah banget dan manisnya pas!" },
+      { nama: "Rizal", isi: "Favorit keluarga tiap sore, apalagi rasa coklat!" },
+      { nama: "Nurul", isi: "Kemasannya lucu dan praktis dibawa kemana saja." },
+      { nama: "Apni", isi: "Harga terjangkau tapi rasa premium banget!" },
+      { nama: "Vinta", isi: "Suka banget sama varian matcha-nya, unik!" }
+    ];
+
+    const container = document.getElementById("daftarTestimoni");
+
+    testimoniList.forEach((t) => {
+      const div = document.createElement("div");
+      div.classList.add("col-md-4");
+
+      div.innerHTML = `
+        <div class="card shadow-sm p-3">
+          <p>"${t.isi}"</p>
+          <strong>- ${t.nama}</strong>
+        </div>
+      `;
+      container.appendChild(div);
+    });
+
+    // ======== Fungsi: Hitung Total Belanja ========
+    function hitungBelanja(event) {
+      event.preventDefault();
+      const harga = parseInt(document.getElementById("harga").value);
+      const jumlah = parseInt(document.getElementById("jumlah").value);
+
+      const total = harga * jumlah;
+      document.getElementById("hasilTotal").textContent =
+        `Total Belanja Anda: Rp ${total.toLocaleString("id-ID")}`;
+    }
+  </script>
+
+</body>
+</html>

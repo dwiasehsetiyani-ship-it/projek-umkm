@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galeri - Banana Kriuk</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Navbar Bootstrap -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-warning">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">Banana Kriuk</a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+        data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Beranda</a></li>
+          <li class="nav-item"><a class="nav-link" href="tentang.html">Tentang Kami</a></li>
+          <li class="nav-item"><a class="nav-link" href="produk.html">Produk</a></li>
+          <li class="nav-item"><a class="nav-link active text-dark fw-bold" href="galeri.html">Galeri</a></li>
+          <li class="nav-item"><a class="nav-link" href="kontak.html">Kontak</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Content -->
+  <main class="container py-4">
+
+    <h2 class="text-center mb-4">Galeri Produk & Kegiatan</h2>
+
+    <!-- jQuery Output Nama Produk -->
+    <p id="nama-produk" class="fw-bold text-center"></p>
+
+    <!-- Grid Bootstrap -->
+    <div class="row g-4">
+
+      <!-- Item 1 -->
+      <div class="col-md-4">
+        <div class="card shadow-sm">
+          <img src="proses penggoregan.jpg" 
+               class="card-img-top item-gambar"
+               data-nama="Proses Penggorengan"
+               alt="Proses penggorengan keripik pisang">
+          <div class="card-body">
+            <p class="card-text">
+              Proses penggorengan keripik pisang secara tradisional dengan minyak berkualitas.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 2 -->
+      <div class="col-md-4">
+        <div class="card shadow-sm">
+          <img src="coklat.jpg" 
+               class="card-img-top item-gambar"
+               data-nama="Keripik Pisang Coklat"
+               alt="Keripik pisang rasa coklat">
+          <div class="card-body">
+            <p class="card-text">
+              Keripik pisang lumer rasa coklat — manis dan renyah dalam setiap gigitan!
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 3 -->
+      <div class="col-md-4">
+        <div class="card shadow-sm">
+          <img src="matcha.jpg" 
+               class="card-img-top item-gambar"
+               data-nama="Keripik Pisang Matcha"
+               alt="Keripik pisang rasa matcha">
+          <div class="card-body">
+            <p class="card-text">
+              Keripik pisang lumer rasa matcha — perpaduan unik gurih & aroma teh hijau.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 4 -->
+      <div class="col-md-4">
+        <div class="card shadow-sm">
+          <img src="taro.jpg" 
+               class="card-img-top item-gambar"
+               data-nama="Keripik Pisang Taro"
+               alt="Keripik pisang rasa taro">
+          <div class="card-body">
+            <p class="card-text">
+              Keripik pisang lumer rasa taro — cita rasa manis lembut yang digemari anak muda.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 5 -->
+      <div class="col-md-4">
+        <div class="card shadow-sm">
+          <img src="logo produk banana kriuk.png" 
+               class="card-img-top item-gambar"
+               data-nama="Logo Banana Kriuk"
+               alt="Logo resmi Banana Kriuk">
+          <div class="card-body">
+            <p class="card-text">
+              Logo resmi Banana Kriuk — Renyahnya Bikin Nagih!
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 6 -->
+      <div class="col-md-4">
+        <div class="card shadow-sm">
+          <img src="tempat.jpg" 
+               class="card-img-top item-gambar"
+               data-nama="Tempat Produksi Banana Kriuk"
+               alt="Tempat produksi Banana Kriuk">
+          <div class="card-body">
+            <p class="card-text">
+              Tempat produksi Banana Kriuk — bersih, higienis, dikelola UMKM lokal.
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="bg-warning text-center py-3 mt-4">
+    <p class="m-0 fw-bold">&copy; 2025 Banana Kriuk. Semua hak dilindungi.</p>
+  </footer>
+
+  <!-- Bootstrap & jQuery -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script type="module" src="galeri.js"></script>
+
+</body>
+</html>
