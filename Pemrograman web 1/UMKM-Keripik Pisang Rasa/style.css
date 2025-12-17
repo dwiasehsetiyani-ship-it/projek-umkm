@@ -642,3 +642,11 @@ button:hover {
     margin-left: 28px; /* supaya sejajar dengan teks label */
 }
 
+.card-text {
+  display: none;
+}
+
+.hover-active {
+  transform: scale(1.05);
+  transition: 0.3s;
+}

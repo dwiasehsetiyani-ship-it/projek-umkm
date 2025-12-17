@@ -1,20 +1,26 @@
 const gambarProduk = document.querySelectorAll('.item-gambar');
-const namaContainer = document.getElementById('nama-produk');
 
-// Fungsi untuk menampilkan nama produk ketika gambar diklik
 const tampilkanNama = (event) => {
-  const nama = event.target.dataset.nama;
-  namaContainer.textContent = `Produk: ${nama}`;
+  const gambar = event.target;
+  const nama = gambar.dataset.nama;
+
+  const card = gambar.closest('.card');
+  const namaProduk = card.querySelector('.nama-produk-item');
+  const deskripsi = card.querySelector('.card-text');
+
+  // tampilkan nama produk
+  namaProduk.textContent = nama;
+
+  // tampilkan deskripsi
+  deskripsi.style.display = 'block';
 };
 
-// Efek hover (menambah dan menghapus class)
-const tambahHover = (elem) => elem.classList.add('hover-active');
-const hapusHover = (elem) => elem.classList.remove('hover-active');
+// hover effect
+const tambahHover = (el) => el.classList.add('hover-active');
+const hapusHover = (el) => el.classList.remove('hover-active');
 
-// Menambahkan event listeners ke semua gambar
-for (const gambar of [...gambarProduk]) {
+for (const gambar of gambarProduk) {
   gambar.addEventListener('click', tampilkanNama);
-
   gambar.addEventListener('mouseenter', () => tambahHover(gambar));
   gambar.addEventListener('mouseleave', () => hapusHover(gambar));
 }
